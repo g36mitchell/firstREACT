@@ -6,6 +6,9 @@ body {
     line-height: 26px;
     font-size: 18px;
   }
+  .my-react-class {
+      color: #4358B6;
+  }
   
   .container {
     margin: 30px;

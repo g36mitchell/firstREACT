@@ -8,92 +8,77 @@
         <link href="index.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
-        <div class="container">
-            <main>
-                <div id="cv-header"></div>
-                <div id="cv-about"></div>
-                <div id="cv-employment"></div>
-                <div id="cv-education"></div>
-                <div id="cv-volunteer"></div>
-            </main>
-            <footer>
-                <p>References available upon request.</p>
-            </footer>
-        </div>
+        <main class="container" id="cv">
+ 
+            <!-- render App component here -->
+ 
+        </main>
         <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
         <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
         <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
         <script type="text/babel">
 
-         
-        ReactDOM.render(
-        <header>
-            <div>
-			    <h1>Sally Student</h1>
-			    <address>
-			    	<ul className="contact-list">
-				    	<li>123 North Main Street, Hometown PA 12345-0123</li>
-				    	<li><a href="mailto:sallyStudent@qq.com?subject=Inquiry%20Concerning%20Your%20CV">sallystudent@qq.com</a></li>
-				    	<li><a href="tel:+2034675309">(203) 467-5309</a></li>
-				    </ul>
-			    </address>
-			    <img id="cv-picture" alt="Sally Student professional photo with her in a yellow sweater and blue pants." src="images/Sally_Student.jpg" />
-            </div>
-		</header>, 
-        document.querySelector('#cv-header')
-        );
+          function App(props) {
 
-        ReactDOM.render(
-        <section class="section-about">
-            <h2 class="section-header">About</h2>
-            <p class="section-text">Cat ipsum dolor sit amet, the door is opening! how exciting oh, it's you, meh, for cats woo eat the fat cats food. Hiss at vacuum cleaner demand to be let outside at once, and expect owner to wait for me as i think about it so curl up and sleep on the freshly laundered towels sleep nap hiss and stare at nothing then run suddenly away for murder hooman toes.</p>
-        </section>, 
-        document.querySelector('#cv-about')
-        );
-
-        ReactDOM.render(
-        <section class="section-employement">
-          <h2 class="section-header">Employment History</h2>
+            return (
+  <section>
+      <header>
+			  <h1 className={props.nameClass}>Sally Student</h1>
+			  <address>
+			    <ul className='contact-list'>
+				    <li>123 North Main Street, Hometown PA 12345-0123</li>
+				    <li><a href='mailto:sallyStudent@qq.com?subject=Inquiry%20Concerning%20Your%20CV'>sallystudent@qq.com</a></li>
+				    <li><a href='tel:+2034675309'>(203) 467-5309</a></li>
+				  </ul>
+			  </address>
+			  <img id='cv-picture' alt='Sally Student professional photo with her in a yellow sweater and blue pants.' src='images/Sally_Student.jpg' />
+      </header>
+      <section className='section-about'>
+        <h2 className='section-header'>About</h2>
+        <p className='section-text'>Cat ipsum dolor sit amet, the door is opening! how exciting oh, it's you, meh, for cats woo eat the fat cats food. Hiss at vacuum cleaner demand to be let outside at once, and expect owner to wait for me as i think about it so curl up and sleep on the freshly laundered towels sleep nap hiss and stare at nothing then run suddenly away for murder hooman toes.</p>
+      </section>
+      <section className="section-employement">
+          <h2 className="section-header">Employment History</h2>
             <div>
               <h3>Peter's Pickle Packing Factory</h3>
                 <p>01-Jan-2018 - present</p>
                 <p>Quality Assurance</p>
-                <p class="section-text">lemme use that as my litter box. Meow love and intently sniff hand nya nya nyan. Intently sniff hand. Leave fur on owners clothes sniff other cat's butt and hang jaw half open thereafter and adventure always hiding behind the couch until lured out by a feathery toy lay on arms while you're using the keyboard i like big cats and i can not lie fall over dead (not really but gets sypathy). Sleep nap my water bowl is clean and freshly replenished, so i'll drink from the toilet gnaw the corn cob.</p>
+                <p className="section-text">lemme use that as my litter box. Meow love and intently sniff hand nya nya nyan. Intently sniff hand. Leave fur on owners clothes sniff other cat's butt and hang jaw half open thereafter and adventure always hiding behind the couch until lured out by a feathery toy lay on arms while you're using the keyboard i like big cats and i can not lie fall over dead (not really but gets sypathy). Sleep nap my water bowl is clean and freshly replenished, so i'll drink from the toilet gnaw the corn cob.</p>
             </div>
             <div>
               <h3>International House of Pancakes</h3>
                 <p>08-August-2014 - 01-December-2017</p>
                 <p>Hostess</p>
-                <p class="section-text">Spend all night ensuring people don't sleep sleep all day human clearly uses close to one life a night no one naps that long so i revive by standing on chestawaken! or eat the rubberband so sun bathe, for rub against owner because nose is wet. Meowzer cough roll on the floor purring your whiskers off. Kick up litter. </p>
+                <p className="section-text">Spend all night ensuring people don't sleep sleep all day human clearly uses close to one life a night no one naps that long so i revive by standing on chestawaken! or eat the rubberband so sun bathe, for rub against owner because nose is wet. Meowzer cough roll on the floor purring your whiskers off. Kick up litter. </p>
             </div>
-        </section>, 
-        document.querySelector('#cv-employment')
-        );
-
-        ReactDOM.render(
-            <section class="section-education">
-            <h2 class="section-header">Education</h2>
+        </section>
+        <section className="section-education">
+            <h2 className="section-header">Education</h2>
             <div>
               <h3>Austin Community College</h3>
               <p>08-August-2015 - 05-May-2018</p>
               <p>Associates Degree in Metallurgy</p>
-              <p class="section-text">Trip owner up in kitchen i want food fall asleep upside-down but hack up furballs, but stand with legs in litter box, but poop outside so purrrrrr. Experiences short bursts of poo-phoria after going to the loo sun bathe, so get scared by doggo also cucumerro sleep everywhere, but not in my bed. Drool floof tum, tickle bum, jellybean footies curly toes hide when guests come over, so chase after silly colored fish toys around the house eats owners hair then claws head so fart in owners food.</p>
+              <p className="section-text">Trip owner up in kitchen i want food fall asleep upside-down but hack up furballs, but stand with legs in litter box, but poop outside so purrrrrr. Experiences short bursts of poo-phoria after going to the loo sun bathe, so get scared by doggo also cucumerro sleep everywhere, but not in my bed. Drool floof tum, tickle bum, jellybean footies curly toes hide when guests come over, so chase after silly colored fish toys around the house eats owners hair then claws head so fart in owners food.</p>
             </div>
-          </section>, 
-        document.querySelector('#cv-education')
-        );
-
-        ReactDOM.render(
-        <section class="section-volunteer">
-            <h2 class="section-header">Volunteer Activities</h2>
+        </section>
+        <section className="section-volunteer">
+            <h2 className="section-header">Volunteer Activities</h2>
               <ul>
                 <li>Habitat for Humanity</li>
                 <li>Books for Kids</li>
               </ul>
-        </section>, 
-        document.querySelector('#cv-volunteer')
-        );
+        </section>
+        <footer>
+            <p>References available upon request.</p>
+        </footer>
+	</section>
+            );
+          }
 
+          ReactDOM.render(
+            <App nameClass='my-react-class' />,
+            document.querySelector('#cv')
+          );
        </script>
     </body>
 </html>
